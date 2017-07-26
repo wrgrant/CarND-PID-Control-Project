@@ -30,7 +30,7 @@ double PID::calculateSteeringAngle(double cte) {
   int_cte += cte;
 
   // Force int_cte to shrink over time.
-  //int_cte *= 0.9;
+  int_cte *= 0.9;
 
   p_error = -Kp * cte;
   i_error = -Ki * int_cte;
